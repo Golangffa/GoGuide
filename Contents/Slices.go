@@ -6,8 +6,8 @@ package main
 import "fmt"
 
 func main() {
-	//Unlike arrays, slices are typed only by the elements they contain (not the number of elements). To create an empty slice with non-zero length, use the builtin make. Here we make a slice of strings of length 3 (initially zero-valued).
 
+	//Unlike arrays, slices are typed only by the elements they contain (not the number of elements). To create an empty slice with non-zero length, use the builtin make. Here we make a slice of strings of length 3 (initially zero-valued).
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
 	//We can set and get just like with arrays.
@@ -48,7 +48,7 @@ func main() {
 	fmt.Println("dcl:", t)
 	//Slices can be composed into multi-dimensional data structures. The length of the inner slices can vary, unlike with multi-dimensional arrays.
 
-	twoD := make([][]int, 3)
+	twoD := make([][]int, 3) //<- why two []
 	for i := 0; i < 3; i++ {
 		innerLen := i + 1
 		twoD[i] = make([]int, innerLen)
